@@ -5,7 +5,7 @@ from time import clock
 
 def div(x):
 	'''
-	Devuelve la division de x + 1con x
+	Devuelve la division de x + 1 entre x
 	'''
 	return (x + 1)/x 
 
@@ -33,12 +33,11 @@ if __name__ == "__main__":
 	map1 = map(div, sec)
 	end_map1 = clock()
 
-	######## SUMA CON REDUCE ########
 	start_map2 = clock()
 	map2 = map(lambda x: (x + 1)/x, sec)
 	end_map2 = clock()
 
-
+	######## SUMA CON REDUCE ########
 	# Reduce aplicada con una funcion definida y con lambda
 	reduce1 = reduce(suma, sec)
 	reduce2 = reduce(lambda x, y: x + y, sec)
